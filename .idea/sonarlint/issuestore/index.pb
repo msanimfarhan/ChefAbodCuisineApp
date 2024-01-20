@@ -15,3 +15,9 @@ i
 9app/src/main/java/ca/dal/cs/csci3130/a2/FirebaseCRUD.java,9\6\969dca87654252993548f6efc8a111c90c6f7100
 p
 @app/src/main/java/ca/dal/cs/csci3130/a2/CredentialValidator.java,8\f\8f401822a8614162601c0b1406909e2e4d271daf
+l
+<app/src/main/java/ca/dal/cs/csci3130/a2/WelcomeActivity.java,1\3\13d691a979b5f755708ab8eb72246fbcb8ca2559
+@
+app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
+f
+6app/src/main/java/ca/dal/cs/csci3130/a2/Dashboard.java,e\8\e85ae61739c8e8c6acc68902f1d4e782897c9014

@@ -1,0 +1,10 @@
+
+C
+java:S1604'"(Make this anonymous inner class a lambda(ÇÚâ®ıÿÿÿÿ
+O
+java:S1128"3Remove this unused import 'android.content.Intent'.(³ğ‹G8’“ğşÑ1
+V	java:S110"<This class has 9 parents which is greater than 5 authorized.(°ïÇåüÿÿÿÿ
+g
+java:S1128"JRemove this unused import 'com.google.android.material.snackbar.Snackbar'.(ë„ƒŠ8“ÚóşÑ1
+V
+java:S1128"4Remove this unused import 'android.widget.TextView'.(„Ë‚ˆÿÿÿÿÿ8’“ğşÑ1
