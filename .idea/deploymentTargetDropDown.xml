@@ -2,10 +2,10 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
-      <entry key="EspressoTest">
+      <entry key="app">
         <State />
       </entry>
-      <entry key="app">
+      <entry key="checkIfEmailIsNotFromDAL()">
         <State />
       </entry>
       <entry key="checkIfLandingPageIsVisible()">
@@ -14,7 +14,10 @@
       <entry key="checkIfMoved2WelcomePage()">
         <State />
       </entry>
-      <entry key="checkIfNetIDIsEmpty()">
+      <entry key="checkIfRoleIsInvalid()">
+        <State />
+      </entry>
+      <entry key="checkIfRoleIsValid()">
         <State />
       </entry>
     </value>

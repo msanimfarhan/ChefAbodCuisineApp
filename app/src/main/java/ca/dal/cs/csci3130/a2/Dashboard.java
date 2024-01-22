@@ -7,10 +7,12 @@ class User {
 }
 
 public class Dashboard extends User {
-    public String accessWidgets() {
+    public String showAccessedWidgets() {
         return this.accessWidgets();
     }
 }
+
+
 
 
 

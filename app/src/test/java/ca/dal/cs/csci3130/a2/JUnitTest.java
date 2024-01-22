@@ -71,6 +71,4 @@ public class JUnitTest {
     public void checkIfRoleIsInvalid() {
         assertFalse(validator.isValidRole("Select your role"));
     }
-
-
 }
