@@ -7,59 +7,69 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:layout_width="411dp"
+        android:layout_height="728dp"
         android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Account Registration"
             android:textSize="16dp"
-            android:text="Account Registration">
-        </TextView>
+            tools:layout_editor_absoluteX="114dp"
+            tools:layout_editor_absoluteY="38dp"></TextView>
 
         <EditText
+            android:id="@+id/netIDBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
+            android:width="200dp"
             android:hint="Net ID"
-            android:width="200dp"
-            android:id="@+id/netIDBox">
-        </EditText>
+            android:textSize="16dp"
+            tools:layout_editor_absoluteX="105dp"
+            tools:layout_editor_absoluteY="112dp"></EditText>
 
         <EditText
+            android:id="@+id/emailBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:hint="Email"
             android:width="200dp"
-            android:id="@+id/emailBox">
-        </EditText>
+            android:hint="Email"
+            android:textSize="16dp"
+            tools:layout_editor_absoluteX="105dp"
+            tools:layout_editor_absoluteY="186dp"></EditText>
 
         <Spinner
+            android:id="@+id/roleSpinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:dropDownWidth="200dp"
-            android:id="@+id/roleSpinner">
+            tools:layout_editor_absoluteX="19dp"
+            tools:layout_editor_absoluteY="275dp">
+
         </Spinner>
 
         <Button
+            android:id="@+id/registerButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Register"
             android:textSize="16dp"
-            android:id="@+id/registerButton"
-            android:text="Register">
-        </Button>
+            tools:layout_editor_absoluteX="150dp"
+            tools:layout_editor_absoluteY="467dp"></Button>
 
         <TextView
+            android:id="@+id/statusLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:id="@+id/statusLabel"
-            android:text="">
-        </TextView>
+            android:text=""
+            android:textSize="16dp"></TextView>
 
     </LinearLayout>
 

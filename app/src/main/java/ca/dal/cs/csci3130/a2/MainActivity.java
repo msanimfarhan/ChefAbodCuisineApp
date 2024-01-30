@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,6 +16,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -30,6 +33,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.loadRoleSpinner();
         this.setupRegistrationButton();
         this.initializeDatabaseAccess();
+
+
     }
 
     protected void loadRoleSpinner() {
@@ -84,16 +89,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //Incomplete method, add your implementation
     }
 
+
+
+
+
     @Override
     public void onClick(View view) {
         //Incomplete, buggy method, fix it!
         String netID = getNetID();
-        String errorMessage = new String();
+        String emailAddress = getEmailAddress();
+        String errorMessage;
         CredentialValidator validator = new CredentialValidator();
         if (validator.isEmptyNetID(netID)) {
-            errorMessage = getResources().getString(R.string.EMPTY_NET_ID).trim();
+            errorMessage = getResources().getString(R.string.EMPTY_NET_ID).trim();           //getResources().getString(R.string.EMPTY_NET_ID).trim();
+        }else if (!validator.isValidNetID(netID)) {
+            errorMessage = getResources().getString(R.string.INVALID_NET_ID).trim();
+        } else if(!validator.isValidEmailAddress(emailAddress)){
+            errorMessage = getResources().getString(R.string.INVALID_EMAIL_ADDRESS).trim();
+        } else if (!validator.isDALEmailAddress(emailAddress)) {
+            errorMessage = getResources().getString(R.string.INVALID_DAL_EMAIL).trim();
+        }else{
+            errorMessage= getResources().getString(R.string.EMPTY_STRING).trim();
         }
-
         setStatusMessage(errorMessage);
+
+
+
     }
+
 }

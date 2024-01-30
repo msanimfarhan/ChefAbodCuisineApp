@@ -3,21 +3,34 @@
   <component name="deploymentTargetDropDown">
     <value>
       <entry key="app">
-        <State />
+        <State>
+          <targetSelectedWithDropDown>
+            <Target>
+              <type value="QUICK_BOOT_TARGET" />
+              <deviceKey>
+                <Key>
+                  <type value="VIRTUAL_DEVICE_PATH" />
+                  <value value="C:\Users\Sanim\.android\avd\Pixel_3a_API_30.avd" />
+                </Key>
+              </deviceKey>
+            </Target>
+          </targetSelectedWithDropDown>
+          <timeTargetWasSelectedWithDropDown value="2024-01-29T04:38:48.778213600Z" />
+        </State>
       </entry>
       <entry key="checkIfEmailIsNotFromDAL()">
         <State />
       </entry>
-      <entry key="checkIfLandingPageIsVisible()">
+      <entry key="checkIfEmailIsValid()">
         <State />
       </entry>
-      <entry key="checkIfMoved2WelcomePage()">
+      <entry key="checkIfNetIDIsEmpty()">
         <State />
       </entry>
-      <entry key="checkIfRoleIsInvalid()">
+      <entry key="checkIfNetIDIsInvalid()">
         <State />
       </entry>
-      <entry key="checkIfRoleIsValid()">
+      <entry key="checkIfNetIDIsValid()">
         <State />
       </entry>
     </value>
