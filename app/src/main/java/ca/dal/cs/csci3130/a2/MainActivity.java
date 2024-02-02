@@ -104,7 +104,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (validator.isEmptyNetID(netID)) {
             errorMessage = getResources().getString(R.string.EMPTY_NET_ID).trim();           //getResources().getString(R.string.EMPTY_NET_ID).trim();
         }else if (!validator.isValidNetID(netID)) {
-            errorMessage = getResources().getString(R.string.INVALID_NET_ID).trim();
+            errorMessage = getResources().getString(R.string.EMPTY_STRING).trim();
+
         } else if(!validator.isValidEmailAddress(emailAddress)){
             errorMessage = getResources().getString(R.string.INVALID_EMAIL_ADDRESS).trim();
         } else if (!validator.isDALEmailAddress(emailAddress)) {

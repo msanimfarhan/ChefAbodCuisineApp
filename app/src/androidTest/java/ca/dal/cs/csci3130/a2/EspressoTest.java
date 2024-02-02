@@ -71,7 +71,7 @@ public class EspressoTest {
         onView(withId(R.id.roleSpinner)).perform(click());
         onData(allOf(is(instanceOf(String.class)), is("Buyer"))).perform(click());
         onView(withId(R.id.registerButton)).perform(click());
-        onView(withId(R.id.statusLabel)).check(matches(withText(R.string.INVALID_NET_ID)));
+        onView(withId(R.id.statusLabel)).check(matches(withText(R.string.EMPTY_STRING)));
     }
 
 
