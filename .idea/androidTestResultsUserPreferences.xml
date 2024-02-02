@@ -106,6 +106,7 @@
                 <map>
                   <entry key="Duration" value="90" />
                   <entry key="Pixel_2_API_33" value="120" />
+                  <entry key="Pixel_3a_API_30" value="120" />
                   <entry key="Tests" value="360" />
                 </map>
               </option>
@@ -119,6 +120,7 @@
                 <map>
                   <entry key="Duration" value="90" />
                   <entry key="Pixel_2_API_33" value="120" />
+                  <entry key="Pixel_3a_API_30" value="120" />
                   <entry key="Tests" value="360" />
                 </map>
               </option>
@@ -132,6 +134,7 @@
                 <map>
                   <entry key="Duration" value="90" />
                   <entry key="Pixel_2_API_33" value="120" />
+                  <entry key="Pixel_3a_API_30" value="120" />
                   <entry key="Tests" value="360" />
                 </map>
               </option>
@@ -158,6 +161,7 @@
                 <map>
                   <entry key="Duration" value="90" />
                   <entry key="Pixel_2_API_33" value="120" />
+                  <entry key="Pixel_3a_API_30" value="120" />
                   <entry key="Tests" value="360" />
                 </map>
               </option>

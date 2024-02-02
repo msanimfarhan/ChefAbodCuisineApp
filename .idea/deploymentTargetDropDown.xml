@@ -21,16 +21,10 @@
       <entry key="checkIfEmailIsNotFromDAL()">
         <State />
       </entry>
-      <entry key="checkIfEmailIsValid()">
+      <entry key="checkIfRoleIsInvalid()">
         <State />
       </entry>
-      <entry key="checkIfNetIDIsEmpty()">
-        <State />
-      </entry>
-      <entry key="checkIfNetIDIsInvalid()">
-        <State />
-      </entry>
-      <entry key="checkIfNetIDIsValid()">
+      <entry key="checkIfRoleIsValid()">
         <State />
       </entry>
     </value>

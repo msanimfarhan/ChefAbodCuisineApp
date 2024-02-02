@@ -49,7 +49,7 @@ public class JUnitTest {
     @Test
     public void checkIfEmailIsInvalid() {
         //buggy test code, write an appropriate test!
-        assertFalse(1 + 2 == 3);
+        assertTrue(validator.isInvalidEmail("abc143"));
     }
 
 

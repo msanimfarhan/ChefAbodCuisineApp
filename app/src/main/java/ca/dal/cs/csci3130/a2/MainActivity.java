@@ -22,7 +22,7 @@ import java.util.regex.Pattern;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static String WELCOME_MESSAGE = "ca.dal.csci3130.a2.welcome";
-    FirebaseDatabase database = null;
+    FirebaseDatabase database = FirebaseDatabase.getInstance("https://a2-ec2f3-default-rtdb.firebaseio.com/");
     FirebaseCRUD crud = null;
 
     @Override
@@ -98,6 +98,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //Incomplete, buggy method, fix it!
         String netID = getNetID();
         String emailAddress = getEmailAddress();
+        String role = getRole();
         String errorMessage;
         CredentialValidator validator = new CredentialValidator();
         if (validator.isEmptyNetID(netID)) {
@@ -108,7 +109,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             errorMessage = getResources().getString(R.string.INVALID_EMAIL_ADDRESS).trim();
         } else if (!validator.isDALEmailAddress(emailAddress)) {
             errorMessage = getResources().getString(R.string.INVALID_DAL_EMAIL).trim();
+        }else if(!validator.isValidRole(role)){
+            errorMessage = getResources().getString(R.string.INVALID_ROLE).trim();
+
+        }else if(validator.isInvalidEmail(emailAddress)) {
+            errorMessage= getResources().getString(R.string.INVALID_EMAIL_ADDRESS).trim();
         }else{
+
+
             errorMessage= getResources().getString(R.string.EMPTY_STRING).trim();
         }
         setStatusMessage(errorMessage);

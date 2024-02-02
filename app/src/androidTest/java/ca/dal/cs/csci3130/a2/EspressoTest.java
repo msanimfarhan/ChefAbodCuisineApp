@@ -89,7 +89,14 @@ public class EspressoTest {
     @Test
     public void checkIfEmailIsInvalid() {
         //buggy Espresso test, write an appropriate test!
-        assertFalse(1 + 2 == 3);
+        onView(withId(R.id.netIDBox)).perform(typeText("sh885689"));
+        onView(withId(R.id.emailBox)).perform(typeText("abc143"));
+        onView(withId(R.id.roleSpinner)).perform(click());
+        onData(allOf(is(instanceOf(String.class)), is("Buyer"))).perform(click());
+        onView(withId(R.id.registerButton)).perform(click());
+        onView(withId(R.id.statusLabel)).check(matches(withText(R.string.INVALID_EMAIL_ADDRESS)));
+
+
     }
 
 
