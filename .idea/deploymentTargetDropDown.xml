@@ -21,14 +21,27 @@
       <entry key="checkIfEmailIsNotFromDAL()">
         <State />
       </entry>
-      <entry key="checkIfEmailIsValid()">
-        <State />
-      </entry>
-      <entry key="checkIfNetIDIsInvalid()">
+      <entry key="checkIfMoved2WelcomePage()">
         <State />
       </entry>
       <entry key="checkIfNetIDIsValid()">
         <State />
+      </entry>
+      <entry key="checkIfRoleIsInvalid()">
+        <State>
+          <targetSelectedWithDropDown>
+            <Target>
+              <type value="QUICK_BOOT_TARGET" />
+              <deviceKey>
+                <Key>
+                  <type value="VIRTUAL_DEVICE_PATH" />
+                  <value value="C:\Users\Sanim\.android\avd\Pixel_3a_API_30.avd" />
+                </Key>
+              </deviceKey>
+            </Target>
+          </targetSelectedWithDropDown>
+          <timeTargetWasSelectedWithDropDown value="2024-02-02T18:46:39.316547800Z" />
+        </State>
       </entry>
       <entry key="checkIfRoleIsValid()">
         <State />

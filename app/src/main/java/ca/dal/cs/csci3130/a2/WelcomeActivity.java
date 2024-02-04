@@ -27,6 +27,12 @@ public class WelcomeActivity extends AppCompatActivity {
 
     protected void showWelcomeMessage() {
         //incomplete method, add your implementation
+        Intent intent = getIntent();
+        String netId = intent.getStringExtra("netId");
+        String email = intent.getStringExtra("emailAddress");
+        String role= intent.getStringExtra("role");
+      TextView textView=  findViewById(R.id.welcomeLabel);
+      textView.setText("Welcome "+ netId + " Your role is " + role +". A welcome email was sent to "+ email );
     }
 
     protected void initializeDatabaseAccess() {

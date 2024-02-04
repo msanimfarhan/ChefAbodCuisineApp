@@ -81,12 +81,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     protected void move2WelcomeWindow(String netID, String emailAddress, String role) {
+
         //Incomplete method, add your implementation
+            Intent intent = new Intent(MainActivity.this, WelcomeActivity.class);
+            intent.putExtra("netId",netID);
+            intent.putExtra("emailAddress",emailAddress);
+            intent.putExtra("role",role);
+
+            startActivity(intent);
+
     }
 
 
     protected void saveInfoToFirebase(String netID, String emailAddress, String role) {
         //Incomplete method, add your implementation
+
     }
 
 
@@ -96,6 +105,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         //Incomplete, buggy method, fix it!
+
         String netID = getNetID();
         String emailAddress = getEmailAddress();
         String role = getRole();
@@ -116,11 +126,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }else if(validator.isInvalidEmail(emailAddress)) {
             errorMessage= getResources().getString(R.string.INVALID_EMAIL_ADDRESS).trim();
         }else{
-
-
             errorMessage= getResources().getString(R.string.EMPTY_STRING).trim();
         }
         setStatusMessage(errorMessage);
+        this.move2WelcomeWindow(netID,emailAddress,role);
 
 
 
