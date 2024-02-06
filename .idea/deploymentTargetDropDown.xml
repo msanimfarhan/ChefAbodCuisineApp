@@ -18,16 +18,10 @@
           <timeTargetWasSelectedWithDropDown value="2024-01-29T04:38:48.778213600Z" />
         </State>
       </entry>
-      <entry key="checkIfEmailIsNotFromDAL()">
+      <entry key="checkIfEmailIsValid()">
         <State />
       </entry>
-      <entry key="checkIfMoved2WelcomePage()">
-        <State />
-      </entry>
-      <entry key="checkIfNetIDIsValid()">
-        <State />
-      </entry>
-      <entry key="checkIfRoleIsInvalid()">
+      <entry key="checkIfLandingPageIsVisible()">
         <State>
           <targetSelectedWithDropDown>
             <Target>
@@ -40,8 +34,27 @@
               </deviceKey>
             </Target>
           </targetSelectedWithDropDown>
-          <timeTargetWasSelectedWithDropDown value="2024-02-02T18:46:39.316547800Z" />
+          <timeTargetWasSelectedWithDropDown value="2024-02-05T07:40:45.728171900Z" />
         </State>
+      </entry>
+      <entry key="checkIfMoved2WelcomePage()">
+        <State>
+          <targetSelectedWithDropDown>
+            <Target>
+              <type value="QUICK_BOOT_TARGET" />
+              <deviceKey>
+                <Key>
+                  <type value="VIRTUAL_DEVICE_PATH" />
+                  <value value="C:\Users\Sanim\.android\avd\Pixel_3a_API_30.avd" />
+                </Key>
+              </deviceKey>
+            </Target>
+          </targetSelectedWithDropDown>
+          <timeTargetWasSelectedWithDropDown value="2024-02-06T16:03:39.708827600Z" />
+        </State>
+      </entry>
+      <entry key="checkIfNetIDIsInvalid()">
+        <State />
       </entry>
       <entry key="checkIfRoleIsValid()">
         <State />

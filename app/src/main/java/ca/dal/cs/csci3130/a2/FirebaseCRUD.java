@@ -11,6 +11,7 @@ import com.google.firebase.database.ValueEventListener;
 public class FirebaseCRUD {
     private FirebaseDatabase database;
     private DatabaseReference netIDRef = null;
+
     private DatabaseReference emailRef = null;
     private DatabaseReference roleRef = null;
     private String extractedNetID;
@@ -30,6 +31,34 @@ public class FirebaseCRUD {
 
     protected void setNetID(String netID) {
         //incomplete method, add your implementation
+        if (netIDRef != null) {
+            netIDRef.setValue(netID);
+        }
+
+    }
+
+    protected DatabaseReference getEmailRef() {
+        return this.database.getReference("email");
+    }
+
+    protected void setEmail(String email) {
+        //incomplete method, add your implementation
+        if (emailRef != null) {
+            emailRef.setValue(email);
+        }
+
+    }
+
+    protected DatabaseReference getRoleRef() {
+        return this.database.getReference("role");
+    }
+
+    protected void setRole(String email) {
+        //incomplete method, add your implementation
+        if (roleRef != null) {
+            roleRef.setValue(email);
+        }
+
     }
 
     protected void setNetIDListener() {
@@ -37,6 +66,9 @@ public class FirebaseCRUD {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 //incomplete method, add your implementation
+                if (snapshot.exists()) {
+                    extractedNetID = snapshot.getValue(String.class);
+                }
             }
 
             @Override
@@ -46,14 +78,52 @@ public class FirebaseCRUD {
         });
     }
 
+    protected void setEmailListener() {
+        this.emailRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    extractedEmailAddress = snapshot.getValue(String.class);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                // Handle potential errors
+            }
+        });
+    }
+
+
+    protected void setRoleListener() {
+        this.roleRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    extractedRole = snapshot.getValue(String.class);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                // Handle potential errors
+            }
+        });
+    }
+
     protected void initializeDatabaseRefs() {
         //Incomplete method, add your implementation
         this.netIDRef = getNetIDRef();
+        this.emailRef = getEmailRef();
+        this.roleRef = getRoleRef();
+
     }
 
     protected void initializeDatabaseRefListeners() {
         //Incomplete method, add your implementation
         this.setNetIDListener();
+        this.setEmailListener(); // Make sure to call this method
+        this.setRoleListener();
     }
 
     public String getExtractedNetID() {

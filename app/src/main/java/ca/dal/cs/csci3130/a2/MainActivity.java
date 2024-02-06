@@ -12,10 +12,14 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -24,12 +28,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public static String WELCOME_MESSAGE = "ca.dal.csci3130.a2.welcome";
     FirebaseDatabase database = FirebaseDatabase.getInstance("https://a2-ec2f3-default-rtdb.firebaseio.com/");
     FirebaseCRUD crud = null;
+    private DatabaseReference firebaseDBRef;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        FirebaseApp.initializeApp(this);
         this.loadRoleSpinner();
         this.setupRegistrationButton();
         this.initializeDatabaseAccess();
@@ -52,6 +58,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void setupRegistrationButton() {
         Button registerButton = findViewById(R.id.registerButton);
         registerButton.setOnClickListener(this);
+    }
+
+    private void connectFirebase(){
+        firebaseDBRef = database.getReference("message");
     }
 
     protected void initializeDatabaseAccess() {
@@ -94,8 +104,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     protected void saveInfoToFirebase(String netID, String emailAddress, String role) {
-        //Incomplete method, add your implementation
-
+        if (crud != null) {
+            // Save the netID, emailAddress, and role to Firebase
+            crud.setNetID(netID);
+            crud.setEmail(emailAddress);
+            crud.setRole(role);
+        } else {
+            // Log an error or show a toast message if crud is not initialized
+            Toast.makeText(this, "Database connection not initialized", Toast.LENGTH_SHORT).show();
+        }
     }
 
 
@@ -130,6 +147,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         setStatusMessage(errorMessage);
         this.move2WelcomeWindow(netID,emailAddress,role);
+        this.saveInfoToFirebase( netID, emailAddress, role);
 
 
 
