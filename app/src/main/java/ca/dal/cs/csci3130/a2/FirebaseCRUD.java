@@ -106,7 +106,7 @@ public class FirebaseCRUD {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                // Handle potential errors
+
             }
         });
     }

@@ -26,7 +26,7 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     protected void showWelcomeMessage() {
-        //incomplete method, add your implementation
+
         Intent intent = getIntent();
         String netId = intent.getStringExtra("netId");
         String email = intent.getStringExtra("emailAddress");
@@ -46,11 +46,24 @@ public class WelcomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //incomplete method, add your implementation
+                String netID = crud.getExtractedNetID();
+                String emailAddress = crud.getExtractedEmailAddress();
+                String role = crud.getExtractedRole();
+
+                if (netID != null && !netID.isEmpty() && emailAddress != null && !emailAddress.isEmpty() && role != null && !role.isEmpty()) {
+                    String message = "Net ID: " + netID + ", Email: " + emailAddress + ", Role: " + role;
+                    showRetrievedItems(v, message);
+                } else {
+                    showRetrievedItems(v, "No data available. Please ensure your credentials are saved.");
+                }
+
             }
         });
     }
 
     protected void showRetrievedItems(View retrieveButton, String message) {
         //incomplete method, add your implementation
+        Snackbar.make(retrieveButton, message, Snackbar.LENGTH_LONG).show();
+
     }
 }

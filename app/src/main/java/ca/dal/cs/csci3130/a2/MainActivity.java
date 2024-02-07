@@ -105,12 +105,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     protected void saveInfoToFirebase(String netID, String emailAddress, String role) {
         if (crud != null) {
-            // Save the netID, emailAddress, and role to Firebase
+
             crud.setNetID(netID);
             crud.setEmail(emailAddress);
             crud.setRole(role);
         } else {
-            // Log an error or show a toast message if crud is not initialized
+
             Toast.makeText(this, "Database connection not initialized", Toast.LENGTH_SHORT).show();
         }
     }
