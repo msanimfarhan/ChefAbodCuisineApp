@@ -53,10 +53,10 @@ public class FirebaseCRUD {
         return this.database.getReference("role");
     }
 
-    protected void setRole(String email) {
+    protected void setRole(String role) {
         //incomplete method, add your implementation
         if (roleRef != null) {
-            roleRef.setValue(email);
+            roleRef.setValue(role);
         }
 
     }
